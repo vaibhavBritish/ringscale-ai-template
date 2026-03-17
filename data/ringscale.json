@@ -1,0 +1,288 @@
+{
+    "navbarData": {
+  "logo": "/logo.png",
+  "navLinks": [
+    { "name": "Home", "href": "" },
+    { "name": "Products & Services", "href": "product_and_services" },
+    { "name": "About", "href": "about-us" },
+    { "name": "Contact", "href": "contact" }
+  ],
+  "ctaText": "Contact"
+},
+  "aboutUsData": {
+    "badge": "Your trusted partner in English Language School",
+    "title": "About ringscale media",
+    "description": "ringscale media is a leading English speaking institute in Delhi, located in Vikaspuri near Janakpuri West Metro Station. We proudly serve students from Vikaspuri, Janakpuri, Uttam Nagar, Tilak Nagar, Subhash Nagar, Paschim Vihar, and nearby areas of West Delhi who want to improve their English fluency and confidence. We offer Spoken English sessions to working professionals, students, and stay-at-home mothers. Our knowledgeable instructors offer hands-on communication instruction, grammar enhancement, personality development, and interview preparation if you're looking for spoken English classes nearby or in Vikaspuri and Janakpuri. Along with spoken English, we also offer IELTS, TOEFL, OET, and PTE coaching."
+  },
+  "contactData": {
+    "title": "Contact Us",
+    "cards": [
+      {
+        "type": "address",
+        "title": "Office Address",
+        "description": "janakpuri West Metro Station New Krishna Park, Janakpuri Vikaspuri New Delhi, Delhi 110018"
+      },
+      {
+        "type": "phone",
+        "title": "Call us",
+        "description": "We're Just a Call Away!",
+        "phone": "+911143506868"
+      }
+    ],
+    "mapEmbedUrl": "https://www.google.com/maps?q=British+English+Academy+Janakpuri&output=embed"
+  },
+  "counterData": {
+    "badge": "Trusted by our customers",
+    "title": "Proven Success in Numbers",
+    "counters": [
+      {
+        "value": "53+",
+        "label": "Services Offered"
+      },
+      {
+        "value": "3.80",
+        "label": "101 Customer Reviews",
+        "icon": "star"
+      },
+      {
+        "value": "3000+",
+        "label": "Happy Customers"
+      }
+    ]
+  },
+  "footerData": {
+    "about": {
+      "logo": "/logo.png",
+      "description": "ringscale media is a leading English speaking institute in Delhi, located in Vikaspuri near Janakpuri West Metro Station. We proudly serve students from Vikaspuri, Janakpuri, Uttam Nagar, Tilak Nagar, Subhash Nagar, Paschim Vihar, and nearby"
+    },
+    "quickLinks": [
+      {
+        "title": "Home",
+        "url": "/"
+      },
+      {
+        "title": "Products & Services",
+        "url": "/services"
+      },
+      {
+        "title": "About",
+        "url": "/about"
+      },
+      {
+        "title": "Contact",
+        "url": "/contact"
+      },
+      {
+        "title": "Privacy Policy",
+        "url": "/privacy"
+      }
+    ],
+    "contact": {
+      "name": "ringscale media",
+      "address": "C-9, First Floor Near Janakpuri West Metro Station New Krishna Park, Janakpuri Vikaspuri New Delhi, Delhi 110018",
+      "phone": "+911143506868"
+    },
+    "social": [
+      {
+        "icon": "instagram",
+        "url": "#"
+      },
+      {
+        "icon": "facebook",
+        "url": "#"
+      },
+      {
+        "icon": "twitter",
+        "url": "#"
+      }
+    ],
+    "mapEmbed": "https://www.google.com/maps?q=British+English+Academy+Janakpuri&output=embed"
+  },
+  "gallery": {
+    "title": "Our Gallery",
+    "images": [
+      {
+        "id": 1,
+        "src": "/demo.jpg",
+        "alt": "Students learning"
+      },
+      {
+        "id": 2,
+        "src": "/demo.jpg",
+        "alt": "Classroom session"
+      },
+      {
+        "id": 3,
+        "src": "/demo.jpg",
+        "alt": "Accent training class"
+      },
+      {
+        "id": 4,
+        "src": "/demo.jpg",
+        "alt": "Group discussion"
+      },
+      {
+        "id": 5,
+        "src": "/demo.jpg",
+        "alt": "English speaking session"
+      },
+      {
+        "id": 6,
+        "src": "/demo.jpg",
+        "alt": "Workshop training"
+      }
+    ]
+  },
+  "herosection": {
+    "title": "ringscale media - English Language School in Vikaspuri, New Delhi, Delhi",
+    "description": "ringscale media is a leading English speaking institute in Delhi, located in Vikaspuri near Janakpuri West Metro Station. We proudly serve students from Vikaspuri, Janakpuri, Uttam Nagar, Tilak Nagar, Subhash Nagar, Paschim Vihar, and nearby areas of West Delhi who want to improve their English fluency and confidence.",
+    "backgroundImage": "/hero-bg.png",
+    "overlayClass": "bg-white/70",
+    "buttons": [
+      {
+        "label": "Get Started",
+        "variant": "primary"
+      },
+      {
+        "label": "Learn More",
+        "variant": "secondary"
+      }
+    ]
+  },
+  "hersosectionFeaturesData": {
+    "title": "English Language School Services by ringscale media",
+    "features": [
+      {
+        "id": "01",
+        "name": "Accent Training"
+      },
+      {
+        "id": "02",
+        "name": "Advanced Courses"
+      },
+      {
+        "id": "03",
+        "name": "Basic Course"
+      },
+      {
+        "id": "04",
+        "name": "Canadian Experience Class"
+      },
+      {
+        "id": "05",
+        "name": "English Grammar"
+      },
+      {
+        "id": "06",
+        "name": "English Language Class"
+      },
+      {
+        "id": "07",
+        "name": "English Language Learn"
+      },
+      {
+        "id": "08",
+        "name": "English Language Skills"
+      }
+    ]
+  },
+  "productServicesFeature": {
+    "title": "Best English Language School Services in Vikaspuri, New Delhi, Delhi by ringscale media",
+    "services": [
+      {
+        "id": "01",
+        "name": "Accent Training"
+      },
+      {
+        "id": "02",
+        "name": "Advanced Courses"
+      },
+      {
+        "id": "03",
+        "name": "Basic Course"
+      },
+      {
+        "id": "04",
+        "name": "Canadian Experience Class"
+      },
+      {
+        "id": "05",
+        "name": "English Grammar"
+      },
+      {
+        "id": "06",
+        "name": "English Language Class"
+      },
+      {
+        "id": "07",
+        "name": "English Language Learn"
+      },
+      {
+        "id": "08",
+        "name": "English Language Skills"
+      },
+      {
+        "id": "09",
+        "name": "English Language Workshops"
+      },
+      {
+        "id": "10",
+        "name": "English Speaking Skills"
+      },
+      {
+        "id": "11",
+        "name": "Essay Writing"
+      },
+      {
+        "id": "12",
+        "name": "Federal Skilled Trade Program"
+      },
+      {
+        "id": "13",
+        "name": "Federal Skilled Worker Program"
+      },
+      {
+        "id": "14",
+        "name": "French Coaching"
+      },
+      {
+        "id": "15",
+        "name": "French Language Classes"
+      },
+      {
+        "id": "16",
+        "name": "French Language Training"
+      }
+    ]
+  },
+  "productandservices": {
+    "title": "Services by ringscale media",
+    "description": "Discover our expertly delivered services, designed to provide reliability and excellence. Let us help you find the perfect solution today!",
+    "buttonText": "Start Exploring Now"
+  },
+  "testimonialsData": {
+    "title": "Why customers love ringscale media",
+    "ratingText": "101+ Users rated us",
+    "rating": "3.8",
+    "reviews": [
+      {
+        "name": "Gurmel S.",
+        "time": "16 days ago",
+        "review": "I recently completed my IELTS training in Janakpuri from ringscale media and my experience was absolutely amazing. The trainers are highly professional, knowledgeable, and very supportive.",
+        "rating": 5
+      },
+      {
+        "name": "Harsh R.",
+        "time": "2 months ago",
+        "review": "I have done french and ielts course.",
+        "rating": 5
+      },
+      {
+        "name": "Rahul K.",
+        "time": "1 month ago",
+        "review": "Great trainers and very supportive environment. Highly recommended for IELTS preparation.",
+        "rating": 5
+      }
+    ]
+  }
+}

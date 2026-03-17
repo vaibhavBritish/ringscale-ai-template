@@ -1,0 +1,9 @@
+services:
+  app:
+    container_name: ringscale-ai
+    build: .
+    restart: always
+    ports:
+      - "3000:3000"
+    # env_file:
+    #   - .env

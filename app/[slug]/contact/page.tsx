@@ -1,7 +1,8 @@
 import React from "react";
 import { MapPin, Phone } from "lucide-react";
 import { notFound } from "next/navigation";
-import { siteData } from "../../../data";
+import { getBusinessBySlug } from "../../../lib/business";
+import type { BusinessSiteData } from "../../../types/business";
 
 type PageProps = {
   params: Promise<{
@@ -29,11 +30,13 @@ const iconMap = {
 
 export default async function ContactPage({ params }: PageProps) {
   const { slug } = await params;
-  const data = siteData[slug as keyof typeof siteData];
+  const business = await getBusinessBySlug(slug);
 
-  if (!data) {
+  if (!business) {
     notFound();
   }
+
+  const data = business.data as unknown as BusinessSiteData;
 
   return <ContactUs {...data.contactData} />;
 }
@@ -42,7 +45,6 @@ const ContactUs = ({ title, cards, mapEmbedUrl }: ContactProps) => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
-
         <h2 className="text-4xl font-bold text-center mb-14 text-black">
           {title}
         </h2>
@@ -63,9 +65,7 @@ const ContactUs = ({ title, cards, mapEmbedUrl }: ContactProps) => {
                 {card.title}
               </h3>
 
-              <p className="text-gray-600 mb-2">
-                {card.description}
-              </p>
+              <p className="text-gray-600 mb-2">{card.description}</p>
 
               {card.phone && (
                 <a
@@ -87,7 +87,6 @@ const ContactUs = ({ title, cards, mapEmbedUrl }: ContactProps) => {
             loading="lazy"
           />
         </div>
-
       </div>
     </section>
   );

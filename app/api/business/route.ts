@@ -1,15 +1,36 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
+function normalize(value: string) {
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "");
+}
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { name, slug, subdomain, data } = body;
+    let { name, slug, subdomain, data } = body;
 
     if (!name || !slug || !subdomain || !data) {
       return NextResponse.json(
         { success: false, message: "Missing required fields" },
+        { status: 400 }
+      );
+    }
+
+    slug = normalize(slug);
+    subdomain = normalize(subdomain);
+
+    if (slug !== subdomain) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "For now, keep slug and subdomain the same value",
+        },
         { status: 400 }
       );
     }

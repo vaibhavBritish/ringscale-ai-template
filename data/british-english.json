@@ -1,15 +1,26 @@
-
 {
   "navbarData": {
-  "logo": "/logo.png",
-  "navLinks": [
-    { "name": "Home", "href": "" },
-    { "name": "Products & Services", "href": "product_and_services" },
-    { "name": "About", "href": "about-us" },
-    { "name": "Contact", "href": "contact" }
-  ],
-  "ctaText": "Contact"
-},
+    "logo": "/logo.png",
+    "navLinks": [
+      {
+        "name": "Home",
+        "href": ""
+      },
+      {
+        "name": "Products & Services",
+        "href": "product_and_services"
+      },
+      {
+        "name": "About",
+        "href": "about-us"
+      },
+      {
+        "name": "Contact",
+        "href": "contact"
+      }
+    ],
+    "ctaText": "Contact"
+  },
   "aboutUsData": {
     "badge": "Your trusted partner in English Language School",
     "title": "About British English Academy",

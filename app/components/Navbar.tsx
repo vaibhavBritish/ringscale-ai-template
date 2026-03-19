@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
@@ -20,23 +20,57 @@ type NavbarProps = {
 
 const Navbar = ({
   slug,
-  logo = "/logo.png",
+  logo = '/logo.png',
   navLinks = [],
-  ctaText = "Contact",
+  ctaText = 'Contact',
 }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
 
+  const isSubdomainMode = useMemo(() => {
+    if (typeof window === 'undefined') return false
+
+    const host = window.location.hostname
+
+    // examples:
+    // localhost                  -> false
+    // ringscale.localhost        -> true
+    // abc.lvh.me                 -> true
+    // abc.ringscaleai.com        -> true
+    // ringscaleai.com            -> false
+    if (host === 'localhost') return false
+    if (host.endsWith('.localhost')) return true
+    if (host.endsWith('.lvh.me')) return true
+
+    const parts = host.split('.')
+    return parts.length > 2
+  }, [])
+
   const buildHref = (href: string) => {
-    if (!href) return `/${slug}`
-    return `/${slug}/${href}`
+    if (!href) {
+      return isSubdomainMode ? '/' : `/${slug}`
+    }
+
+    return isSubdomainMode ? `/${href}` : `/${slug}/${href}`
+  }
+
+  const contactHref = isSubdomainMode ? '/contact' : `/${slug}/contact`
+  const homeHref = isSubdomainMode ? '/' : `/${slug}`
+
+  const isActiveLink = (href: string) => {
+    if (!href) {
+      return pathname === '/' || pathname === `/${slug}`
+    }
+
+    const fullHref = buildHref(href)
+    return pathname === fullHref
   }
 
   return (
     <header className="w-full absolute top-0 left-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Link href={`/${slug}`}>
+          <Link href={homeHref}>
             <Image
               src={logo}
               alt="Logo"
@@ -50,7 +84,7 @@ const Navbar = ({
         <ul className="hidden md:flex items-center gap-10 text-[17px] font-medium text-gray-700">
           {navLinks.map((link, index) => {
             const fullHref = buildHref(link.href)
-            const isActive = pathname === fullHref
+            const isActive = isActiveLink(link.href)
 
             return (
               <li key={index}>
@@ -69,7 +103,7 @@ const Navbar = ({
 
         <div className="hidden md:block">
           <Link
-            href={`/${slug}/contact`}
+            href={contactHref}
             className="inline-block bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-xl font-semibold shadow-md transition"
           >
             {ctaText}
@@ -104,7 +138,7 @@ const Navbar = ({
             })}
 
             <Link
-              href={`/${slug}/contact`}
+              href={contactHref}
               className="block w-full text-center bg-blue-700 hover:bg-blue-800 text-white px-5 py-3 rounded-xl font-semibold transition"
               onClick={() => setIsOpen(false)}
             >

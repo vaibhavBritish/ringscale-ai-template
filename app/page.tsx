@@ -1,5 +1,11 @@
-import { redirect } from "next/navigation";
-
 export default function Home() {
-  redirect("ringscale");
+  return (
+    <div className="w-screen h-screen overflow-hidden">
+      <iframe
+        src="https://www.ringscaleai.com/"
+        className="w-full h-full border-0"
+        allowFullScreen
+      />
+    </div>
+  );
 }

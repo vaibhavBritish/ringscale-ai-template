@@ -1,34 +1,11 @@
 services:
-  db:
-    image: postgres:16-alpine
-    container_name: ringscale-db
-    restart: always
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: vaibhav
-      POSTGRES_DB: ringscale
-    ports:
-      - "5434:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d ringscale"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-
   app:
-    container_name: ringscale-ai
+    container_name: ringscale-ai-template
     build: .
     restart: always
-    depends_on:
-      db:
-        condition: service_healthy
     ports:
-      - "3001:3000"
+      - "3009:3000"
     environment:
-      DATABASE_URL: "postgresql://postgres:vaibhav@db:5432/ringscale"
+      DATABASE_URL: "postgresql://postgres.axouvddhktvhsigxbxfd:Ringscale%40123@aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true"
+      DIRECT_URL: "postgresql://postgres.axouvddhktvhsigxbxfd:Ringscale%40123@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres"
       NODE_ENV: production
-
-volumes:
-  postgres_data:

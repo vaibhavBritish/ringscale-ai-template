@@ -17,3 +17,12 @@ export async function getBusinessBySubdomain(subdomain: string) {
     },
   });
 }
+
+export async function updateBusinessBySlug(slug: string, data: any) {
+  return prisma.business.update({
+    where: {
+      slug,
+    },
+    data,
+  });
+}
